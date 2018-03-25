@@ -1,0 +1,23 @@
+.form-control{
+
+
+  width: 40%;
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+
+
+
+}
+
+.body{
+
+   margin: 20px;
+
+}
+
+.container{
+
+  margin-top: 80px;
+  background-color: pink;
+}
