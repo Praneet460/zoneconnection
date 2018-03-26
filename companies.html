@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Zone Connection Inc.
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel = "stylesheet" href="styles.css""></link>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+
+</head>
+<body>
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Zone Connection Inc.</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="F:\Social Account Details\index.html">Police Organizations</a></li>
+      <li class="active"><a href="F:\Social Account Details\companies.html">Companies/Organizations</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    </ul>
+
+    </div>
+</nav>
+
+<div>
+
+    <br>
+  <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+
+          <th>Companies/Organization</th>
+          <th>Country</th>
+          <th>Facebook Page</th>
+          <th>Twitter Handle</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr>
+          <td>Google</td>
+          <td>US</td>
+          <td><a href="https://www.facebook.com/GoogleIndia/?brand_redir=104958162837" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px"></i></a><br><kbd>GoogleIndia</kbd></td>
+          <td><a href="https://twitter.com/GoogleIndia" target="_blank"><i class="fa fa-twitter-square" style="font-size:24px"></i></a><br><kbd>GoogleIndia</kbd></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+</div>
+<!--Footer-->
+<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+  <div class="footer">
+    <div class="navbar-text pull-left">
+      <p>© Powered By FutureLabs. <br />
+         futurelabs.app@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+
+</body>
+</html>
