@@ -1,0 +1,25 @@
+<!--Footer-->
+<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+  <div class="footer">
+    <div class="navbar-text pull-left">
+      <p>© Powered By FutureLabs. <br />
+         futurelabs.app@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+
+</body>
+</html>
