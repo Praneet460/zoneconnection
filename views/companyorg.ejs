@@ -1,23 +1,39 @@
 <% include partials/header %>
 
 <div class="container" style="padding-top:100px;">
-  <div class="panel panel-default" >
-    <!-- Default panel contents -->
-    <div class="panel-heading">Panel heading</div>
-
-    <!-- Table -->
-    <table class="table">
-      <% company.forEach(function(company){ %>
+  <table class="ui selectable celled table">
+    <thead>
+      <tr><th class="single line">Companies/Organization</th>
+        <th>Country</th>
+            <th>Ratings</th>
+            <th>Facebook Page</th>
+            <th>Twitter Handle</th>
+    </tr>
+  </thead>
+    <tbody>
+        <% company.forEach(function(company){ %>
       <tr>
-          <td><%= company.company %></td>
-          <td><%= company.country %></td>
-          <td><a href="<%= company.facebook %>" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px"></i></a><br><kbd>accenture</kbd></td>
-          <td><a href="<%= company.twitter %>" target="_blank"><i class="fa fa-twitter-square" style="font-size:24px"></i></a><br><kbd>Accenture</kbd></td>
-        </tr>
-        <% }); %>
-    </table>
-  </div>
+        <td>
+          <h2 class=""><%= company.company %></h2>
+        </td>
+        <td class="single line">
+          <%= company.country %>
+        </td>
+        <td>
+          <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+        </td>
+        <td class="">
+          <a href="<%= company.facebook %>" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px"></i></a><br><kbd><%= company.company %></kbd>
+        </td>
+        <td><a href="<%= company.twitter %>" target="_blank"><i class="fa fa-twitter-square" style="font-size:24px"></i></a><br><kbd><%= company.company %></kbd></td>
+      </tr>
+      <% }); %>
+
+    </tbody>
+  </table>
 </div>
+
+
 
 
 <% include partials/footer %>

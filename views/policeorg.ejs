@@ -1,23 +1,39 @@
 <% include partials/header %>
 
 <div class="container" style="padding-top:100px;">
-  <div class="panel panel-default" >
-    <!-- Default panel contents -->
-    <div class="panel-heading">Panel heading</div>
-
-    <!-- Table -->
-    <table class="table">
-      <% police.forEach(function(police){ %>
+  <table class="ui selectable celled table">
+    <thead>
+      <tr><th class="single line">Police-Organization</th>
+        <th>State</th>
+            <th>Ratings</th>
+            <th>Facebook Page</th>
+            <th>Twitter Handle</th>
+    </tr>
+  </thead>
+    <tbody>
+        <% police.forEach(function(police){ %>
       <tr>
-          <td><%= police.policeorg %></td>
-          <td><%= police.state %></td>
-          <td><a href="<%= police.facebook %>" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px"></i></a><br><kbd>accenture</kbd></td>
-          <td><a href="<%= police.twitter %>" target="_blank"><i class="fa fa-twitter-square" style="font-size:24px"></i></a><br><kbd>Accenture</kbd></td>
-        </tr>
-        <% }); %>
-    </table>
-  </div>
+        <td>
+          <h2 class=""><%= police.policeorg %></h2>
+        </td>
+        <td class="single line">
+          <%= police.state %>
+        </td>
+        <td>
+          <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+        </td>
+        <td class="">
+          <a href="<%= police.facebook %>" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px"></i></a><br><kbd><%= police.policeorg %></kbd>
+        </td>
+        <td><a href="<%= police.twitter %>" target="_blank"><i class="fa fa-twitter-square" style="font-size:24px"></i></a><br><kbd><%= police.policeorg %></kbd></td>
+      </tr>
+      <% }); %>
+
+    </tbody>
+  </table>
 </div>
+
+
 
 
 <% include partials/footer %>
